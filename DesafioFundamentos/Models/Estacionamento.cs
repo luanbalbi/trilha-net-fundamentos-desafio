@@ -15,14 +15,14 @@ namespace DesafioFundamentos.Models
         public void AdicionarVeiculo()
         {
             Console.WriteLine("Digite a placa do veículo para estacionar:");
-            string placa = Console.ReadLine();
+            string placa = Console.ReadLine().ToUpper();
 
             if (veiculos.Any(x => x.ToUpper() == placa))
             {
                 Console.WriteLine("Esse veiculo já está estacionado.");
                 return;
             }
-            veiculos.Add(placa.ToUpper());
+            veiculos.Add(placa);
         }
 
         public void RemoverVeiculo()
