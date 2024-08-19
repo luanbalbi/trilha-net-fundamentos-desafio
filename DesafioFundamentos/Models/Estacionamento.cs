@@ -19,7 +19,7 @@ namespace DesafioFundamentos.Models
 
             if (veiculos.Any())
             {
-                Console.WriteLine("Veiculo já se encontra no estacionamento.");
+                Console.WriteLine("Esse veiculo já está estacionado.");
                 return;
             }
             veiculos.Add(placa);
@@ -61,8 +61,10 @@ namespace DesafioFundamentos.Models
             if (veiculos.Any())
             {
                 Console.WriteLine("Os veículos estacionados são:");
-                // TODO: Realizar um laço de repetição, exibindo os veículos estacionados
-                // *IMPLEMENTE AQUI*
+                foreach (string veiculo in veiculos)
+                {
+                    Console.WriteLine(veiculo);
+                }
             }
             else
             {
